@@ -7,8 +7,8 @@ const mongoose = require("mongoose");             // import mongoose
 const dotenv = require("dotenv");                  // for security
 dotenv.config();                                    // initialization of dot env
 const userRoute = require("./routes/user");        // User related routes   
-const authRoute = require("./routes/auth");         
-const productRoute = require("./routes/product");
+const authRoute = require("./routes/auth");         // authentication  routes
+const productRoute = require("./routes/product");        
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");

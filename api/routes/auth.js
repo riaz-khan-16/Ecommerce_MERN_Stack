@@ -40,7 +40,7 @@ router.post("/login", async (req, res) => {     // when server got /login post r
 
     const accessToken = jwt.sign(                       // to generate web token sign() method is used for authentication
       {
-        id: user._id,
+        id: user._id,                     
         isAdmin: user.isAdmin,
       },
       process.env.JWT_SEC,
