@@ -14,4 +14,4 @@ const UserSchema = new mongoose.Schema(                    // creating an struct
   { timestamps: true }                                  //  Mongoose timestamps are supported by the schema. Timestamps save the current time of the document created and also when it was updated in form of a Date by turning it true. When set to true, the mongoose creates two fields as follows: createdAt: Date representing when the document was created.
 );                                                       // updatedAt: Date representing when this document was last updated
 
-module.exports = mongoose.model("User", UserSchema); // exporting the schema of User
+module.exports = mongoose.model("User", UserSchema);             // exporting the schema of User
