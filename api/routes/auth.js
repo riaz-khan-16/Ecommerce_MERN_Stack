@@ -38,7 +38,7 @@ router.post("/login", async (req, res) => {
     OriginalPassword !== req.body.password &&
       res.status(401).json("Wrong credentials!");
 
-    const accessToken = jwt.sign(
+    const accessToken = jwt.sign(                       // to generate web token sign() method is used
       {
         id: user._id,
         isAdmin: user.isAdmin,
