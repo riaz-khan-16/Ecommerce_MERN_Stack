@@ -48,7 +48,7 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {   // givin
 router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);    // The findByIdAndDelete() function is used to find a matching document, removes it, and passing the found document (if any) to the callback.
-    res.status(200).json("User has been deleted...");       
+    res.status(200).json("User has been deleted...");        
   } catch (err) {
     res.status(500).json(err);
   }
