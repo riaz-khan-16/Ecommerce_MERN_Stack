@@ -8,8 +8,8 @@ const dotenv = require("dotenv");                  // for security
 dotenv.config();                                    // initialization of dot env
 const userRoute = require("./routes/user");        // User related routes   
 const authRoute = require("./routes/auth");         // authentication  routes
-const productRoute = require("./routes/product");        
-const cartRoute = require("./routes/cart");
+const productRoute = require("./routes/product");    // for products    
+const cartRoute = require("./routes/cart");    // for cart
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
 const cors = require("cors");

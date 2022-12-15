@@ -58,16 +58,16 @@ router.get("/find/:id", async (req, res) => {                            //if se
 });
 
 //GET ALL PRODUCTS
-router.get("/", async (req, res) => {
-  const qNew = req.query.new;
-  const qCategory = req.query.category;
-  try {
-    let products;
+router.get("/", async (req, res) => {        // when server gets this "/" get request it will run the codes below
+  const qNew = req.query.new;                     // In Express.js, you can directly use the req.query() method to access the string variables. As per the documentation, the req.param method only gets the route parameters, whereas the req.query method checks the query string parameters.
+  const qCategory = req.query.category;        
+  try {                                      // try it
+    let products;                              // defining product variable
 
-    if (qNew) {
-      products = await Product.find().sort({ createdAt: -1 }).limit(1);
-    } else if (qCategory) {
-      products = await Product.find({
+    if (qNew) {                               // if new query is gotten
+      products = await Product.find().sort({ createdAt: -1 }).limit(1);   // The sort() method specifies the order in which the query returns the matching documents from the given collection. You must apply this method to the cursor before retrieving any documents from the database. It takes a document as a parameter that contains a field: value pair that defines the sort order of the result set. The value is 1 or -1 specify an ascending or descending sort respectively.
+    } else if (qCategory) {                                //  // if category query is gotten           
+      products = await Product.find({    
         categories: {
           $in: [qCategory],
         },
