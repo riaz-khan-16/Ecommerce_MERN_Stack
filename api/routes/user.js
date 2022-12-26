@@ -9,7 +9,7 @@ const {                              // importing the methods for verifying toke
   verifyToken,                       
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
-} = require("./verifyToken");            //to know more about JSON web token see the video: https://www.youtube.com/watch?v=S20PCL9e_ks
+} = require("./verifyToken");            //to know more about JSON web token ... see the video: https://www.youtube.com/watch?v=S20PCL9e_ks
 
 
            
@@ -44,6 +44,10 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {   // givin
   }
 });
 
+
+
+
+
 //DELETE
 router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
   try {
@@ -53,6 +57,13 @@ router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+
+
+
+
 
 //GET USER
 router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
@@ -64,6 +75,11 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+
+
 
 //GET ALL USER
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
@@ -77,6 +93,11 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+
+
 
 //GET USER STATS
 

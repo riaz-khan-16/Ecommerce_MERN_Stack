@@ -1,9 +1,15 @@
 const router = require("express").Router();  // importing router
 const User = require("../models/User");    // schema of User          
-const CryptoJS = require("crypto-js");      // Crypto is a module in Node. js which deals with an algorithm that performs data encryption and decryption. This is used for security purpose like user authentication where storing the password in Database in the encrypted form. Crypto module provides set of classes like hash, HMAC, cipher, decipher, sign, and verify.
+const CryptoJS = require("crypto-js");      // Crypto is a module ... performs data encryption and decryption. This is used for security purpose like user authentication where storing the password in Database in the encrypted form. Crypto module provides set of classes like hash, HMAC, cipher, decipher, sign, and verify.
 const jwt = require("jsonwebtoken");          // JWT, or JSON Web Token, is an open standard used to share information between two parties securely — a client and a server. In most cases, it's an encoded JSON containing a set of claims and a signature.
 
-//REGISTER
+
+
+
+
+
+
+//For REGISTER a new User 
 router.post("/register", async (req, res) => {   // When it gets /register end point it will perform this post method
   const newUser = new User({                  // creating an User object    
     username: req.body.username,         // assigningin username from request object that is send from form
@@ -22,7 +28,21 @@ router.post("/register", async (req, res) => {   // When it gets /register end p
   }
 });
 
-//LOGIN                         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//For LOGIN                         
 
 router.post("/login", async (req, res) => {     // when server got /login post request it will perform this code
   try {                                                                 // try to do code below
