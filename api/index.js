@@ -9,10 +9,10 @@ dotenv.config();                                    // initialization of dot env
 const userRoute = require("./routes/user");        // User related routes   
 const authRoute = require("./routes/auth");         // authentication  routes
 const productRoute = require("./routes/product");    // for products    
-const cartRoute = require("./routes/cart");    // for cart
-const orderRoute = require("./routes/order");
-const stripeRoute = require("./routes/stripe");
-const cors = require("cors");
+const cartRoute = require("./routes/cart");    // for cart                    
+const orderRoute = require("./routes/order"); // for oder routes
+const stripeRoute = require("./routes/stripe");  // for payment system
+const cors = require("cors");     // The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch to mitigate the risks of cross-origin HTTP requests.
 
 
 mongoose
