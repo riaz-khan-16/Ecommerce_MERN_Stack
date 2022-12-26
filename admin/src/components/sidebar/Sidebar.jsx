@@ -1,21 +1,27 @@
-import "./sidebar.css";
-import {
-  LineStyle,
-  Timeline,
-  TrendingUp,
-  PermIdentity,
-  Storefront,
-  AttachMoney,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
+import "./sidebar.css";  // link the css file
+
+
+
+import {     // import necessary elements from material UI
+  LineStyle,  //https://materialui.co/icon/line-style
+  Timeline,  //https://mui.com/material-ui/react-timeline/
+  TrendingUp,  //https://materialui.co/icon/trending-up
+  PermIdentity, //https://materialui.co/icon/perm-identity
+  Storefront,   //https://materialui.co/material-icons-sharp/storefront
+  AttachMoney, //https://materialui.co/icon/attach-money
+  BarChart,         //https://materialui.co/icon/bar-chart
+  MailOutline,       //https://materialui.co/icon/mail-outline
+  DynamicFeed,        //https://materialui.co/icon/dynamic-feed
+  ChatBubbleOutline, // https://materialui.co/icon/chat-bubble-outline
   WorkOutline,
   Report,
-} from "@material-ui/icons";
-import { Link } from "react-router-dom";
+} from "@material-ui/icons";     // import necessary elements from material UI  
 
-export default function Sidebar() {
+
+
+import { Link } from "react-router-dom"; //A <Link> is an element that lets the user navigate to another page by clicking or tapping on it
+
+export default function Sidebar() {          
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
