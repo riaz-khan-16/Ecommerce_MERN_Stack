@@ -1,7 +1,7 @@
-import Chart from "../../components/chart/Chart";
-import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
-import "./home.css";
-import { userData } from "../../dummyData";
+import Chart from "../../components/chart/Chart"; // done
+import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo"; //done
+import "./home.css"; //read
+import { userData } from "../../dummyData";  //done
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useEffect, useMemo, useState } from "react";
@@ -10,7 +10,7 @@ import { userRequest } from "../../requestMethods";
 export default function Home() {
   const [userStats, setUserStats] = useState([]);
 
-  const MONTHS = useMemo(
+  const MONTHS = useMemo( //need to study
     () => [
       "Jan",
       "Feb",
@@ -28,7 +28,8 @@ export default function Home() {
     []
   );
 
-  useEffect(() => {
+
+  useEffect(() => {                  // need to study
     const getStats = async () => {
       try {
         const res = await userRequest.get("/users/stats");

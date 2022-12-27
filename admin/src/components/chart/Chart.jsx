@@ -1,12 +1,15 @@
+
+                    
+
 import "./chart.css";
 import {
-  LineChart,
+  LineChart, 
   Line,
   XAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from "recharts";
+} from "recharts"; //A composable charting library built on React components
 
 export default function Chart({ title, data, dataKey, grid }) {
 

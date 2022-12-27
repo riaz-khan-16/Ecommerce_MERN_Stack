@@ -1,9 +1,15 @@
-import axios from "axios";
+
+
+                  //  Learning
+
+
+
+import axios from "axios";  //used for making http request or calling api
 
 const BASE_URL = "http://localhost:5000/api/";
 const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken;
 
-export const publicRequest = axios.create({
+export const publicRequest = axios.create({     
   baseURL: BASE_URL,
 });
 

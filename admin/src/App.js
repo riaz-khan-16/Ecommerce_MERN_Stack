@@ -1,7 +1,7 @@
-import Sidebar from "./components/sidebar/Sidebar";
-import Topbar from "./components/topbar/Topbar";
-import "./App.css";
-import Home from "./pages/home/Home";
+import Sidebar from "./components/sidebar/Sidebar"; //done
+import Topbar from "./components/topbar/Topbar"; //done
+import "./App.css";                              //done
+import Home from "./pages/home/Home";             
 import {
   BrowserRouter as Router,
   Switch,

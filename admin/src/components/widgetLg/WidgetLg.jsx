@@ -6,6 +6,8 @@ import {format} from "timeago.js"
 export default function WidgetLg() {
   const [orders, setOrders] = useState([]);
 
+
+
   useEffect(() => {
     const getOrders = async () => {
       try {
@@ -15,9 +17,15 @@ export default function WidgetLg() {
     };
     getOrders();
   }, []);
+
+
+
   const Button = ({ type }) => {
     return <button className={"widgetLgButton " + type}>{type}</button>;
   };
+
+
+  
   return (
     <div className="widgetLg">
       <h3 className="widgetLgTitle">Latest transactions</h3>

@@ -21,14 +21,14 @@ import {     // import necessary elements from material UI
 
 import { Link } from "react-router-dom"; //A <Link> is an element that lets the user navigate to another page by clicking or tapping on it
 
-export default function Sidebar() {          
+export default function Sidebar() {          // create a sidebar component
   return (
-    <div className="sidebar">
+    <div className="sidebar">                      
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <Link to="/" className="link">
+            <Link to="/" className="link">          
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
               Home

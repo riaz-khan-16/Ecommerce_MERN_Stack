@@ -1,29 +1,38 @@
-import "./featuredInfo.css";
-import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
-import { useEffect, useState } from "react";
-import { userRequest } from "../../requestMethods";
 
-export default function FeaturedInfo() {
-  const [income, setIncome] = useState([]);
-  const [perc, setPerc] = useState(0);
 
-  useEffect(() => {
+
+
+
+import "./featuredInfo.css";   
+import { ArrowDownward, ArrowUpward } from "@material-ui/icons";  //read
+import { useEffect, useState } from "react";                   // read
+import { userRequest } from "../../requestMethods";          // made for calling api
+
+export default function FeaturedInfo() {                         
+  const [income, setIncome] = useState([]);  // income can be changed in setIncome function
+  const [perc, setPerc] = useState(0); //perc can be changed in setPerc method
+
+
+
+
+  useEffect(() => {                 // what will show the component after rendering is set by uesEffect
     const getIncome = async () => {
       try {
-        const res = await userRequest.get("orders/income");
-        setIncome(res.data);
-        setPerc((res.data[1].total * 100) / res.data[0].total - 100);
+        const res = await userRequest.get("orders/income");// confused
+        setIncome(res.data);  // taking the data from response      
+        setPerc((res.data[1].total * 100) / res.data[0].total - 100); // taking the data from response
       } catch {}
     };
     getIncome();
   }, []);
+
 
   return (
     <div className="featured">
       <div className="featuredItem">
         <span className="featuredTitle">Revanue</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">${income[1]?.total}</span>
+          <span className="featuredMoney">${income[1]?.total}</span>  
           <span className="featuredMoneyRate">
             %{Math.floor(perc)}{" "}
             {perc < 0 ? (
